@@ -1,0 +1,41 @@
+<project name = "Present" default = "run">
+
+	<property name = "projectDir" value = "present" />
+	<property name = "className" value = "Present" />
+	
+	<property name = "comp" value = "src\${className}\" />
+    <property name="classes" value="build\classes"/>
+	<property name = "del" value = "${classes}\${projectDir}" />
+    <property name = "jar" value="build\jar" />
+
+    <property name = "main-class"  value = "${projectDir}.toPresent"/>
+ 
+	<target name = "clean">
+		<delete dir = "${del}" /> 
+		<echo>Clean</echo>
+	</target>
+	
+	<target name = "compile">
+		<mkdir dir = "${classes}" /> 
+		<javac srcdir = "${comp}" destdir = "${classes}" />
+		<echo>Compile</echo>
+	</target>
+	
+	<target name = "clean_and_compile" depends = "clean, compile">
+	</target>
+	
+	<target name = "jar" depends = "clean, compile">
+		<!--<delete dir = "${jar}" /> -->
+		<mkdir dir = "${jar}" />
+		<jar destfile = "${jar}\${className}.jar" basedir = "${classes}">
+            <manifest>
+                <attribute name = "Main-Class" value = "${main-class}"/>
+            </manifest>
+        </jar>
+	</target>
+
+    <target name = "run" depends = "jar">
+        <java jar = "${jar}\${className}.jar" fork = "true" />
+    </target>
+	
+</project>
