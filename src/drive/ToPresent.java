@@ -4,12 +4,12 @@
  * and open the template in the editor.
  */
 
-package present;
+package drive;
 
-/**
- *
- * @author Admin
- */
+import behavior.Behavior;
+import behavior.BehaviorCONST;
+import present.Present;
+import dwarve.*;
 
 public class ToPresent {
     
@@ -18,17 +18,17 @@ public class ToPresent {
         Behavior behavior = new Behavior();
         String children[] = {"Roma", "Sasha"};
         String behaviorResult = null;
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < children.length; i++) {
             behaviorResult = behavior.findOut();
-            if (behaviorResult.equals("Gift for a disobedient child")) {
-                present = DwarveForBadChildSingleton.getDwarve().
+            if (behaviorResult.equals(BehaviorCONST.BAD)) {
+                present = DwarveForBadChild.getDwarve().
                         giveDeservedPresent(behaviorResult);
-                System.out.println(children[i] + " take " + present.getName());
+                System.out.println(children[i] + " take " + present);
             }
             else {
-                present = DwarveForGoodChildSingleton.getDwarve().
+                present = DwarveForGoodChild.getDwarve().
                         giveDeservedPresent(behaviorResult);
-                System.out.println(children[i] + " take " + present.getName());
+                System.out.println(children[i] + " take " + present);
             }
             System.out.println();
         }

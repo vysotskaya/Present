@@ -13,16 +13,32 @@ import java.util.List;
  *
  * @author Admin
  */
-abstract class Present {
+public abstract class Present {
 
-    String presentName;
-    String card;
-    String chocolate;
-    String bike;
-    List<String> contents = new ArrayList<>();
+    private String presentName;
+    private String card;
+    private String chocolate;
+    private String bike;
+    private List<String> contents = new ArrayList<>();
 
-    public String getName() {
-        return presentName;
+    public void setPresentName(String name) {
+        presentName = name;
+    }
+    
+    public void setCard(String card) {
+        this.card = card;
+    }
+    
+    public void setChocolate (String chocolate) {
+        this.chocolate = chocolate;
+    }
+    
+    public void setBike(String bike) {
+        this.bike = bike;
+    }
+    
+    public void addPresent(String present) {
+        contents.add(present);
     }
     
     public void creating() {
@@ -50,5 +66,10 @@ abstract class Present {
     abstract public void cookingChocolate();
     abstract public void decorating();
     abstract public void packing();
+    
+    @Override
+    public String toString() {
+        return presentName;
+    }
 }
 

@@ -10,7 +10,7 @@ package present;
  *
  * @author Admin
  */
-class ForBadChildPresent extends Present {
+public class ForBadChildPresent extends Present {
 
     public ForBadChildPresent() {
 //        presentName = "Подарок для непослушного ребёнка";
@@ -18,13 +18,13 @@ class ForBadChildPresent extends Present {
 //        chocolate = "Горький шоколад.";
 //        bike = "Самокат";
         
-        presentName = "Gift for a disobedient child";
-        card = "Card with Christmas tree";
-        chocolate = "Dark chocolate";
-        bike = "Kick scooter";
+        super.setPresentName("Gift for a disobedient child");
+        super.setCard("Card with Christmas tree");
+        super.setChocolate("Dark chocolate");
+        super.setBike("Kick scooter");
 
         //contents.add("Подарок для непослушного ребёнка");
-        contents.add("Gift for a disobedient child");
+        super.addPresent(behavior.BehaviorCONST.BAD);
     }
     
     @Override
@@ -33,6 +33,7 @@ class ForBadChildPresent extends Present {
         System.out.println("Dwarves draw a card with Christmas tree.");
     }
     
+    @Override
     public void cookingChocolate() {
         //System.out.println("Гномы варят горький шоколад.");
         System.out.println("Dwarves cook dark chocolate.");

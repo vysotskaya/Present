@@ -10,20 +10,21 @@ package present;
  *
  * @author Admin
  */
-class ForGoodChildPresent extends Present {
+public class ForGoodChildPresent extends Present {
 
     public ForGoodChildPresent() {
 //        presentName = "Подарок для послушного ребёнка";
 //        card = "Открытка с оленями";
 //        chocolate = "Молочный шоколад";
 //        bike = "Обычный велосипед";
-        presentName = "Gift for an obedient child";
-        card = "Card with deer";
-        chocolate = "Milk chocolate";
-        bike = "Ordinary bicycle";
         
-        //contents.add("Подарок для послушного ребёнка");
-        contents.add("Gift for an obedient child");
+        super.setPresentName("Gift for an obedient child");
+        super.setCard("Card with deer");
+        super.setChocolate("Milk chocolate");
+        super.setBike("Ordinary bicycle");
+
+        //contents.add("Подарок для непослушного ребёнка");
+        super.addPresent(behavior.BehaviorCONST.GOOD);
     }
     @Override
     public void drawingCard() {

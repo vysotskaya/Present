@@ -4,21 +4,19 @@
  * and open the template in the editor.
  */
 
-package present;
+package behavior;
 
 /**
  *
  * @author Admin
  */
-class Behavior {
+public class Behavior {
     public String findOut() {
       int rand = (int)(Math.random()*3);
-      String behavior = null;
-      if (rand == 1) behavior = "Gift for a perfect child";
+      if (rand == 1) return BehaviorCONST.PERFECT;
       else {
-            if (rand == 2) behavior = "Gift for an obedient child";
-            else behavior = "Gift for a disobedient child";
+            if (rand == 2) return BehaviorCONST.BAD;
+            else return BehaviorCONST.GOOD;
       }
-      return behavior;
     }
 }

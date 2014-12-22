@@ -10,7 +10,7 @@ package present;
  *
  * @author Admin
  */
-class ForPerfectChildPresent extends Present {
+public class ForPerfectChildPresent extends Present {
 
     public ForPerfectChildPresent() {
 //        presentName = "Подарок для идеального ребёнка";
@@ -18,13 +18,13 @@ class ForPerfectChildPresent extends Present {
 //        chocolate = "Молочный шоколад с орешками";
 //        bike = "Горный велосипед";
         
-        presentName = "Gift for a perfect child";
-        card = "Musical card with snowmen";
-        chocolate = "Milk chocolate with nuts";
-        bike = "Mountain bicycle";
+        super.setPresentName("Gift for a perfect child");
+        super.setCard("Musical card with snowmen");
+        super.setChocolate("Milk chocolate with nuts");
+        super.setBike("Mountain bicycle");
 
-        //contents.add("Подарок для идеального ребёнка");
-        contents.add("Gift for a perfect child");
+        //contents.add("Подарок для непослушного ребёнка");
+        super.addPresent(behavior.BehaviorCONST.PERFECT);
     }
     @Override
     public void drawingCard() {
