@@ -22,20 +22,20 @@ public class ForPerfectChildPresent extends Present {
         super.setCard("Musical card with snowmen");
         super.setChocolate("Milk chocolate with nuts");
         super.setBike("Mountain bicycle");
-
-        //contents.add("Подарок для непослушного ребёнка");
-        super.addPresent(behavior.BehaviorCONST.PERFECT);
     }
+    
     @Override
     public void drawingCard() {
         //System.out.println("Гномы делают музыкальную открытку и рисуют на ней снеговиков.");
         System.out.println("Dwarves make musical card and draw  snowmen on it.");
     }
+    
     @Override
     public void cookingChocolate() {
         //System.out.println("Гномы варят молочный шоколад и добавляют орешки.");
         System.out.println("Dwarves cook milk chocolate and add nuts.");
     }
+    
     @Override
     public void packing() {
         //System.out.println("Гномы cкладывают подарок в блестящую коробку.");

@@ -22,9 +22,6 @@ public class ForBadChildPresent extends Present {
         super.setCard("Card with Christmas tree");
         super.setChocolate("Dark chocolate");
         super.setBike("Kick scooter");
-
-        //contents.add("Подарок для непослушного ребёнка");
-        super.addPresent(behavior.BehaviorCONST.BAD);
     }
     
     @Override

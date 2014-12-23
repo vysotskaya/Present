@@ -21,16 +21,14 @@ public class ForGoodChildPresent extends Present {
         super.setPresentName("Gift for an obedient child");
         super.setCard("Card with deer");
         super.setChocolate("Milk chocolate");
-        super.setBike("Ordinary bicycle");
-
-        //contents.add("Подарок для непослушного ребёнка");
-        super.addPresent(behavior.BehaviorCONST.GOOD);
     }
+    
     @Override
     public void drawingCard() {
         //System.out.println("Гномы рисуют открытку с оленями.");
         System.out.println("Dwarves draw a card with deer.");
     }
+    
     @Override
     public void cookingChocolate() {
         //System.out.println("Гномы варят молочный шоколад.");
